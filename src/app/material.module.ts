@@ -4,6 +4,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
+import { FormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   imports: [
@@ -12,16 +14,17 @@ import { MatIconModule } from '@angular/material/icon';
     MatChipsModule,
     MatFormFieldModule,
     MatButtonModule,
-    MatChipsModule,
-    MatIconModule
+    MatIconModule,
+    FormsModule,
+    MatInputModule
   ],
   exports: [
-    MatButtonModule,
-    MatChipsModule,
     MatFormFieldModule,
     MatButtonModule,
     MatChipsModule,
-    MatIconModule
+    MatIconModule,
+    FormsModule,
+    MatInputModule
   ]
 })
 export class MaterialModule { }

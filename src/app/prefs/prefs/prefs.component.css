@@ -18,17 +18,12 @@
     align-items: center;
 }
 
-
-input {
-    border: 2px solid purple;
-    border-radius: 4px;
-}
-
-.prefs-input {
-    border: 2px solid purple;
-}
-
 button {
     width: 150px;
     height: 40px;
 }
+
+  .name-field {
+    width: 100%;
+  }
+  
