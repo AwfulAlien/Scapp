@@ -1,0 +1,34 @@
+.example-chip-list {
+    width: 100%;
+}
+
+.prefs-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.prefs-inner-container {
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    align-items: center;
+}
+
+
+input {
+    border: 2px solid purple;
+    border-radius: 4px;
+}
+
+.prefs-input {
+    border: 2px solid purple;
+}
+
+button {
+    width: 150px;
+    height: 40px;
+}
