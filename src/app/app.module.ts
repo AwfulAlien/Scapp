@@ -7,20 +7,21 @@ import { PrefsModule } from './prefs/prefs.module';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MaterialModule } from './material.module';
 import { MatButtonModule } from '@angular/material/button';
+import { AppRoutingModule } from './app.routes';
 
 @NgModule({
     declarations: [
         AppComponent,
     ],
     imports: [
+        BrowserModule,
+        RouterModule,
+        AppRoutingModule,
         CommonModule,
         RouterOutlet, 
         PrefsModule,
-        BrowserModule,
-        RouterModule,
         MaterialModule,
-        MatButtonModule
-        // AppRoutingModule,
+        MatButtonModule,
     ],
     providers: [
     provideAnimationsAsync()

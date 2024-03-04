@@ -1,22 +1,22 @@
 <div class="prefs-container">
   <div class="prefs-inner-container">
     <mat-form-field class="example-chip-list">
-      <mat-label>Favorite Fruits</mat-label>
-      <mat-chip-grid #chipGrid aria-label="Enter fruits">
-        @for (fruit of fruits; track fruit) {
-        <mat-chip-row (removed)="remove(fruit)" [editable]="true" (edited)="edit(fruit, $event)"
-          [aria-description]="'press enter to edit ' + fruit.name">
-          {{fruit.name}}
-          <button matChipRemove [attr.aria-label]="'remove ' + fruit.name">
+      <mat-label>Enter Preference</mat-label>
+      <mat-chip-grid #chipGrid aria-label="Enter preferences">
+        @for (preference of preferences; track preference) {
+        <mat-chip-row (removed)="remove(preference)" [editable]="true" (edited)="edit(preference, $event)"
+          [aria-description]="'press enter to edit ' + preference.name">
+          {{preference.name}}
+          <button matChipRemove [attr.aria-label]="'remove ' + preference.name">
             <mat-icon>cancel</mat-icon>
           </button>
         </mat-chip-row>
         }
-        <input placeholder="New fruit..." [matChipInputFor]="chipGrid"
+        <input placeholder="New preference..." [matChipInputFor]="chipGrid"
           [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="addOnBlur"
           (matChipInputTokenEnd)="add($event)" />
       </mat-chip-grid>
     </mat-form-field>
-    <button mat-raised-button color="primary">Chat</button>
+    <button (click)="clickMe()" routerLink="chat" mat-raised-button color="accent">Chat</button>
   </div>
 </div>
