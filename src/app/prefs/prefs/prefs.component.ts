@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { COMMA, ENTER } from '@angular/cdk/keycodes';
 import { MatChipEditedEvent, MatChipInputEvent } from '@angular/material/chips';
 import { LiveAnnouncer } from '@angular/cdk/a11y';
+import { DataService } from '../../services/data.service';
 
 export interface preference {
   name: string;
@@ -14,10 +15,11 @@ export interface preference {
 })
 
 export class PrefsComponent {
+  constructor(private dataService: DataService) {}
   addOnBlur = true;
   readonly separatorKeysCodes = [ENTER, COMMA] as const;
   preferences: preference[] = [];
-
+ 
   announcer = inject(LiveAnnouncer);
 
   add(event: MatChipInputEvent): void {
@@ -54,8 +56,10 @@ export class PrefsComponent {
       this.preferences[index].name = value;
     }
   }
-
+  name='';
   clickMe() {
     this.preferences.forEach(pp => console.log(pp));
+    this.dataService.changeName(this.name);
+   // this.dataService.changeprefs('');
   }
 }

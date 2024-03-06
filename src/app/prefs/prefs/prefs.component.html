@@ -1,8 +1,8 @@
 <div class="prefs-container">
   <div class="prefs-inner-container">
-    <mat-form-field class="name-field">
+    <mat-form-field class="name-field"> 
       <mat-label>Name</mat-label>
-      <input matInput placeholder="Enter Display name" value="">
+      <input [(ngModel)]= "name" matInput placeholder="Enter Display name" value="" required>
     </mat-form-field>
     <mat-form-field class="example-chip-list">
       <mat-label>Enter Preference</mat-label>
