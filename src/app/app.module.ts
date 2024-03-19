@@ -8,6 +8,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { MaterialModule } from './material.module';
 import { MatButtonModule } from '@angular/material/button';
 import { AppRoutingModule } from './app.routes';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
     declarations: [
@@ -22,6 +23,7 @@ import { AppRoutingModule } from './app.routes';
         PrefsModule,
         MaterialModule,
         MatButtonModule,
+        HttpClientModule
     ],
     providers: [
     provideAnimationsAsync()

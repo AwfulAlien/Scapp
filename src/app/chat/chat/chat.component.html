@@ -1,11 +1,29 @@
 <div class="chat-container">
-  <form class="chat-input-form">
-    <!-- <input type="text" id="message-input" placeholder="Type your message..."> -->
-    <mat-form-field class="message-field">
-      <input matInput  placeholder="Enter message..">
-    </mat-form-field>
-    <!-- <button type="submit">Send</button> -->
-    <button mat-raised-button color="primary"> <mat-icon aria-hidden="false" fontIcon="send"></mat-icon>
-      Send</button>
-  </form>
-</div>
+  <div class="name-prefs">
+    <div class="name">
+      <h2> {{username}} </h2>
+    </div>
+    <div class="prefs">
+      <div *ngFor="let pref of preferences; let i = index">
+        {{ pref.pref}}{{ i < preferences.length - 1 ? ', ' : '' }} </div>
+      </div>
+    </div>
+
+    <div class="message-container">
+      <ul>
+        <li *ngFor="let message of messages">
+          <app-message [username]="message.username" [message]="message.message" [isSender]="message.isSender"
+            [timestamp]="message.timestamp"></app-message>
+        </li>
+      </ul>
+    </div>
+
+    <form class="chat-input-form">
+      <mat-form-field class="message-field">
+        <input matInput placeholder="Enter message.." [(ngModel)]="message" name="message">
+      </mat-form-field>
+      <button mat-raised-button color="primary" (click)="sendMessage()"> <mat-icon aria-hidden="false"
+          fontIcon="send"></mat-icon>
+        Send</button>
+    </form>
+  </div>
