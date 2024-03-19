@@ -1,0 +1,15 @@
+<div class="message-outline sent" [ngClass]="{ 'sender': isSender, 'receiver': !isSender }">
+    <div class="message-innerline">
+        <div class="message-sender">{{username}}</div>
+        <div class="text-time">
+            <div class="message-content">{{message}}</div>
+            <div class="message-time">{{timestamp}}</div>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="message" [ngClass]="{ 'sender': isSender, 'receiver': !isSender }">
+    <span class="username">{{ username }}</span>
+    <span class="message-content">{{ message }}</span>
+    <span class="timestamp">{{ timestamp }}</span>
+  </div> -->

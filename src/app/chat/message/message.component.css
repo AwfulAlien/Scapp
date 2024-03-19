@@ -1,0 +1,115 @@
+/* .message-outline {
+    display: flex;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    padding: 0 15px;
+}
+
+.message-innerline {
+    background: #673ab7;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.message-sender {
+    font-weight: bold;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+.message-time {
+    font-size: 0.8em;
+    color: rgb(193, 193, 193);
+    margin-left: 30px;
+  }
+
+.message-outline.sent {
+    justify-content: flex-end;
+    color: white;
+}
+
+.text-time {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.message {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+  }
+  
+  .sender {
+    background-color: #ddd;
+    text-align: right;
+  }
+  
+  .receiver {
+    background-color: #eee;
+    text-align: left;
+  }
+  
+  .username {
+    font-weight: bold;
+    margin-right: 5px;
+  }
+  
+  .timestamp {
+    font-size: 0.8em;
+    color: #aaa;
+  }
+   */
+
+
+   .message-outline {
+    display: flex; /* Allow horizontal layout for message elements */
+    justify-content: flex-end; /* Align sender messages to the right */
+    margin-bottom: 10px; /* Add some spacing between messages */
+  }
+  
+  .message-outline.receiver {
+    justify-content: flex-start; /* Align receiver messages to the left */
+  }
+  
+  .message-innerline {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    padding: 10px;
+    border-radius: 10px; /* Rounded corners for messages */
+    background-color: #673ab7;
+    color: white;
+    max-width: 70%; /* Limit message width to prevent overflow */
+  }
+  
+  .message-sender {
+    font-weight: bold;
+    margin-bottom: 5px; /* Add some space between sender and message content */
+  }
+  
+  .text-time {
+    display: flex; /* Allow horizontal layout for message content and time */
+    justify-content: space-between; /* Align content and time on opposite sides */
+  }
+  
+  .message-content {
+    word-wrap: break-word; /* Allow text wrapping within the message area */
+    margin-right: 10px; /* Add some space between content and time */
+  }
+  
+  .message-time {
+    font-size: 0.8em; /* Slightly smaller font size for time */
+    color: #ccc; /* Light gray color for time */
+  }
+  
+  /* Optional: Styling for sender and receiver messages (customize as needed) */
+  
+  /* .message-outline.sender {
+    background-color: #e0f7fa;
+  }
+  
+  .message-outline.receiver {
+    background-color: #fff; 
+  } */
+  
